@@ -3605,11 +3605,13 @@ public final class Settings {
         public static final String VOLUME_ADJUST_SOUNDS_ENABLED = "volume_adjust_sounds_enabled";
 
         /**
-         * IMPORTANT: If you add a new public settings you also have to add it to
-         * PUBLIC_SETTINGS below. If the new setting is hidden you have to add
-         * it to PRIVATE_SETTINGS below. Also add a validator that can validate
-         * the setting value. See an example above.
+         * MediaScanner behavior on boot.
+         * 0 = enabled
+         * 1 = ask (notification)
+         * 2 = disabled
+         * @hide
          */
+        public static final String MEDIA_SCANNER_ON_BOOT = "media_scanner_on_boot";
 
         /**
          * Settings to backup. This is here so that it's in the same place as the settings
