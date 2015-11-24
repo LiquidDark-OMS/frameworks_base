@@ -3594,7 +3594,7 @@ public final class Settings {
         };
 
         /**
-         * Beginning of PureNexus System Settings Additions
+         * Beginning of Liquid Nougat System Settings
          * @hide
          */
 
@@ -6297,7 +6297,7 @@ public final class Settings {
                 "managed_profile_contact_remote_search";
 
         /**
-         * Beginning of PureNexus Secure Settings Additions
+         * Beginning of Liquid Nougat Secure Settings
          * @hide
          */
 
