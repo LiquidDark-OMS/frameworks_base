@@ -127,7 +127,7 @@ public final class WebViewFactory {
      */
     public static String getWebViewLibrary(ApplicationInfo ai) {
         if (ai.metaData != null)
-            return ai.metaData.getString("com.android.webview.WebViewLibrary");
+            return ai.metaData.getString("com.google.android.webview.WebViewLibrary");
         return null;
     }
 
