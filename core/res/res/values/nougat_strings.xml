@@ -26,4 +26,7 @@
     <!-- ADB notification message-->
     <string name="adb_active_generic_notification_message">Touch to disable debugging.</string>
 
+    <!-- SlimSeekbar -->
+    <string name="default_string">Default</string>
+
 </resources>
