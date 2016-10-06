@@ -6559,6 +6559,15 @@ public final class Settings {
 
         /**
          * The TCP/IP port to run ADB on, or -1 for USB
+<<<<<<< HEAD
+=======
+         * @hide
+         */
+        public static final String ADB_PORT = "adb_port";
+
+        /**
+         * Holds comma separated list of ordering of QS tiles.
+>>>>>>> e91c722... Merge tag 'android-7.0.0_r13' into ng
          * @hide
          */
         public static final String ADB_PORT = "adb_port";
@@ -6638,6 +6647,7 @@ public final class Settings {
             TTY_MODE_ENABLED,
             INCALL_POWER_BUTTON_BEHAVIOR,
             ADVANCED_REBOOT,
+            QS_TILES
         };
 
         /**
