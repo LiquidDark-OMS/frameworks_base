@@ -43,9 +43,6 @@ import com.android.systemui.R;
 import com.android.systemui.qs.QSTile;
 import com.android.systemui.statusbar.policy.BatteryController;
 
-import android.provider.Settings;
-import android.provider.Settings.Global;
-
 import java.text.NumberFormat;
 
 public class BatteryTile extends QSTile<QSTile.State> implements BatteryController.BatteryStateChangeCallback {
@@ -97,13 +94,8 @@ public class BatteryTile extends QSTile<QSTile.State> implements BatteryControll
     }
 
     @Override
-    public void handleLongClick() {
-        setCpuInfoEnabled();
-    }
-
-    @Override
     public Intent getLongClickIntent() {
-        return null;
+        return new Intent(Intent.ACTION_POWER_USAGE_SUMMARY);
     }
 
     @Override
@@ -306,23 +298,5 @@ public class BatteryTile extends QSTile<QSTile.State> implements BatteryControll
                 postBindView();
             }
         };
-    }
-
-    private boolean setCpuInfoEnabled() {
-        boolean enabled = Settings.Global.getInt(mContext.getContentResolver(),
-                Settings.Global.SHOW_CPU, 1) != 0;
-        Intent service = (new Intent())
-                .setClassName("com.android.systemui",
-                "com.android.systemui.CPUInfoService");
-        if (!enabled) {
-            Settings.Global.putInt(
-                mContext.getContentResolver(), Settings.Global.SHOW_CPU, 1);
-            mContext.startService(service);
-        } else {
-            Settings.Global.putInt(
-                mContext.getContentResolver(), Settings.Global.SHOW_CPU, 0);
-            mContext.stopService(service);
-        }
-        return enabled;
     }
 }
